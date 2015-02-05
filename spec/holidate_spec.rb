@@ -81,11 +81,12 @@ describe Holidate do
   end
 
   it 'allows you to search from the beginning or end of a month with #find' do
-    Holidate.find('fourth to last', 'Tuesday', 'July', 2012).must_equal Date.new 2012, 7, 10
+    Holidate.find('second', 'Tuesday', 'July', 2012).must_equal Date.new 2012, 7, 10
     Holidate.find('last', 'Thursday', 'January', 2006).must_equal Date.new 2006, 1, 26
   end
 
   it 'allows spaces, underscores, or hyphens to separate words in the first argument of #find when searching from the end of a month' do
+    Holidate.find('second to last', 'Tuesday', 'September', 1991).must_equal Date.new 1991, 9, 17
     Holidate.find('fourth-from-last', 'Thursday', 'April', 2005).must_equal Date.new 2005, 4, 7
     Holidate.find(:fourth_to_last, :wednesday, :june, 1989).must_equal Date.new 1989, 6, 7
   end
