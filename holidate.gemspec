@@ -2,13 +2,13 @@ require 'date'
 
 Gem::Specification.new do |s|
   s.name        = 'holidate'
-  s.version     = '0.0.3'
+  s.version     = '0.0.4'
   s.date        = Date.today.to_s
   s.summary     = 'Holiday Dates'
   s.description = 'A simple gem that returns Date objects for holidays'
   s.authors     = ['Cohen Carlisle']
   s.email       = 'holidate.gem@gmail.com'
-  s.files       = ['lib/holidate.rb']
+  s.files       = `git ls-files`.split("\n")
   s.homepage    = 'http://rubygems.org/gems/holidate'
   s.license     = 'MIT'
 
