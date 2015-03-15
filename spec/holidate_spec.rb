@@ -5,6 +5,10 @@ require 'holidate'
 
 describe Holidate do
 
+  it "doesn't respond to ::new" do
+    Holidate.respond_to?(:new).must_equal false
+  end
+
   describe '::new_years_day' do
     it "finds New Year's Day" do
       Holidate.new_year(2014).must_equal Date.new(2014, 1, 1)

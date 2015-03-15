@@ -2,7 +2,7 @@ require 'date'
 
 Gem::Specification.new do |s|
   s.name        = 'holidate'
-  s.version     = '0.0.4'
+  s.version     = '1.0.0'
   s.date        = Date.today.to_s
   s.summary     = 'Holiday Dates'
   s.description = 'A simple gem that returns Date objects for holidays'
